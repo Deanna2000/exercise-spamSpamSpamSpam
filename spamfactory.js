@@ -1,7 +1,8 @@
 //Get data out of local storage
-ParsedArticleListDB = JSON.parse(localStorage.getItem("ArticleListDB"))
+ParsedCustomersDB = JSON.parse(localStorage.getItem("CustomersDB"))
 
-const emailAddresses = CustomersDB.map(email =>
-    {
-
-    })
+let emailAdd = []
+const emailAddresses = ParsedCustomersDB.forEach(element => {
+    element.contacts.email.map(currentEmail => emailAdd.push(currentEmail))
+    console.log(emailAdd)
+})
